@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { ExternalLink } from 'lucide-react'
 import Image from 'next/image'
+import { SectionHeader } from '@/components/ui/section-header'
 
 const projects = [
   {
@@ -35,10 +36,17 @@ const projects = [
 export default function Portfolio() {
   return (
     <div className="mb-24 pt-24 px-4">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.slice(0, 6).map((project, index) => (
-          <ProjectCard key={index} {...project} />
-        ))}
+      <div className="max-w-7xl mx-auto">
+        <SectionHeader
+          title="Our Portfolio"
+          subtitle="Explore our latest projects and success stories"
+          centered
+        />
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+          {projects.slice(0, 6).map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
+        </div>
       </div>
     </div>
   )
