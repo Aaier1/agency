@@ -58,15 +58,14 @@ function ProjectCard({ title, description, image, tags, link }: {
       transition={{ duration: 0.5 }}
     >
       <Card className="overflow-hidden">
-        <div className="relative aspect-video">
+        <div className="relative w-full h-48">
           <Image 
-            src={image} 
-            alt={title} 
-            className="object-cover w-full h-full" 
-            width={800} 
-            height={450} // 16:9 aspect ratio
-            layout="responsive" 
-            loading="lazy"
+            src={image}
+            alt={title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={false}
           />
         </div>
         <div className="p-6">

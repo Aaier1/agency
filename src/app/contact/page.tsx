@@ -10,13 +10,15 @@ import { Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Contact() {
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="max-w-8xl mx-auto  pt-12">
         <SectionHeader
-          title="Contact Us"
-          subtitle="Get in touch with our team"
-          centered
+           title="Get in Touch"
+           subtitle="Reach out to us for any inquiries or to discuss your project."
+           centered
+            description="We're always eager to hear from you and explore how we can help your business thrive. Fill out the form or contact us directly to start a conversation."
         />
+    <div className="min-h-screen pt-24 pb-16 px-4 max-w-7xl mx-auto">
+      
 
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div

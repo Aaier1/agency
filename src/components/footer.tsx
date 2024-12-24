@@ -38,8 +38,9 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="text-sm text-muted-foreground">contact@aaierit.com</li>
-              <li className="text-sm text-muted-foreground">+1 (555) 123-4567</li>
-              <li className="text-sm text-muted-foreground">123 Business Street<br />New York, NY 10001</li>
+              <li className="text-sm text-muted-foreground">9868347582</li>
+              <li className="text-sm text-muted-foreground">Kathmandu, Nepal</li>
+              <li className="text-sm text-muted-foreground">Something</li>
             </ul>
           </div>
         </div>

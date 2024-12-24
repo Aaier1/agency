@@ -8,7 +8,7 @@ declare global {
 }
 
 // Google Analytics Configuration
-export const GA_TRACKING_ID = 'G-XXXXXXXXXX'; // Replace with your actual GA tracking ID
+export const GA_TRACKING_ID = 'G-8EJ6K4NTXQ'; // Replace with your actual GA tracking ID
 
 // Google Analytics Functions
 export const pageview = (url: string) => {

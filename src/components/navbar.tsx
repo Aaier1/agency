@@ -4,8 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
-import { ModeToggle } from '@/components/mode-toggle'
-import { Menu, X, Code } from 'lucide-react'
+import { Menu, X, Code, ArrowRight } from 'lucide-react'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -26,12 +25,25 @@ export default function Navbar() {
             <Link href="/portfolio" className="text-foreground/80 hover:text-foreground">Portfolio</Link>
             <Link href="/about" className="text-foreground/80 hover:text-foreground">About</Link>
             <Link href="/contact" className="text-foreground/80 hover:text-foreground">Contact</Link>
-            <ModeToggle />
-         
+            <Link href="/get-started">
+              <Button 
+                variant="outline" 
+                className="mt-1 hover:bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-200 ease-in-out"
+              >
+                <motion.div 
+                  initial={{ x: 0 }}
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex items-center"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </motion.div>
+              </Button>
+            </Link>
           </div>
 
           <div className="md:hidden flex items-center">
-            <ModeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="ml-2 p-2"
@@ -54,7 +66,23 @@ export default function Navbar() {
           <Link href="/portfolio" className="block px-3 py-2 rounded-md text-foreground/80 hover:text-foreground" onClick={() => setIsOpen(false)}>Portfolio</Link>
           <Link href="/about" className="block px-3 py-2 rounded-md text-foreground/80 hover:text-foreground" onClick={() => setIsOpen(false)}>About</Link>
           <Link href="/contact" className="block px-3 py-2 rounded-md text-foreground/80 hover:text-foreground" onClick={() => setIsOpen(false)}>Contact</Link>
-          <Button className="w-full mt-4" onClick={() => setIsOpen(false)}>Get Started</Button>
+          <Link href="/get-started">
+            <Button 
+              variant="outline" 
+              className="w-full mt-4 hover:bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-200 ease-in-out"
+              onClick={() => setIsOpen(false)}
+            >
+              <motion.div 
+                initial={{ x: 0 }}
+                whileHover={{ x: 5 }}
+                transition={{ duration: 0.2 }}
+                className="flex items-center"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </motion.div>
+            </Button>
+          </Link>
         </div>
       </motion.div>
     </nav>

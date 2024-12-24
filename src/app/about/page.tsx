@@ -32,13 +32,15 @@ const values = [
 
 export default function About() {
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <SectionHeader
-          title="About Us"
-          subtitle="Learn about our mission and values"
-          centered
-        />
+    <div className="max-w-8xl mx-auto pt-12">
+    <SectionHeader
+       title="About us"
+       subtitle="Discover the story behind AaierIt and learn how our team of experts can help you achieve your business goals."
+       centered
+        description="At AaierIt, we believe in fostering long-term partnerships with our clients. Our team of experts is dedicated to delivering tailored solutions that meet the unique needs of each business. Explore our story and discover how we can help you achieve your goals."
+    />
+    <div className="min-h-screen pt-24 pb-16 px-4 max-w-7xl mx-auto">
+
 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <motion.div

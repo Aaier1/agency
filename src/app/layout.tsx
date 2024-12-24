@@ -1,7 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { ThemeProvider } from '@/components/theme-provider'
 import { Analytics } from '@/components/analytics'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
@@ -32,16 +31,11 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+      
           <Navbar />
           <main>{children}</main>
           <Footer />
-        </ThemeProvider>
+    
         <Analytics />
       </body>
     </html>

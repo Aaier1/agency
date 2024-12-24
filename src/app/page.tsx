@@ -10,6 +10,7 @@ import Faqs from '@/components/Faqs'
 import Features from '@/components/Features'
 import Starts from '@/components/Starts'
 import Link from 'next/link'
+import Image from 'next/image'
 
 // ServiceCard component
 const ServiceCard = ({ icon, title, description }: { 
@@ -78,25 +79,30 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto text-center">
           <motion.div {...heroAnimation}>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Transform Your Online Presence
+            We Create Stunning Websites and Powerful SEO Strategies
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We create stunning websites and implement powerful SEO strategies to help your business thrive in the digital world.
+            <p className="text-xl text-muted-foreground mb-8 max-w-4xl mx-auto">
+              Unleash the potential of your digital presence with our unique websites and data-driven SEO strategies. As a leading Web Design and application development company in Kathmandu, Nepal, we are dedicated to crafting websites that drive business success.
             </p>
             <div className="flex justify-center gap-4">
-              <Button 
-                size="lg"
-                className="transition-transform duration-200 hover:scale-105"
-              >
-                Get Started
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="transition-transform duration-200 hover:scale-105"
-              >
-                Learn More
-              </Button>
+              <Link href="/get-started">
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="transition-transform duration-200 hover:scale-105 hover:bg-orange-500 text-black font-bold border-2 border-orange-500"
+                >
+                  Get Started
+                </Button>
+              </Link>
+              <Link href="/about">
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="transition-transform duration-200 hover:scale-105 hover:bg-purple-600 text-black font-bold border-2 border-purple-600"
+                >
+                  Learn More
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -126,6 +132,113 @@ export default function HomePage() {
             </Button>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Helping Businesses in All Domains Section */}
+       <section className="py-16  bg-white rounded-lg shadow-md">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">Helping Businesses in All Domains</h2>
+          <p className="text-xl text-gray-600  mx-auto mb-8">
+            To understand what we can do for you, start by understanding what we’ve done for others. We are proud of the strong working relationships we’ve built with all our clients over the years. These names are a testament to our proven capabilities and strategic approach.
+          </p>
+          <div className="flex flex-wrap justify-center gap-8 mb-8">
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="transition-transform duration-200 hover:scale-105 hover:bg-green-500 text-black font-bold border-2 border-green-500"
+            >
+              Tour and Travels
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="transition-transform duration-200 hover:scale-105 hover:bg-yellow-500 text-black font-bold border-2 border-yellow-500"
+            >
+              Education Service
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="transition-transform duration-200 hover:scale-105 hover:bg-red-500 text-black font-bold border-2 border-red-500"
+            >
+              NGO / INGO
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="transition-transform duration-200 hover:scale-105 hover:bg-blue-400 text-black font-bold border-2 border-blue-400"
+            >
+              Health Service
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="transition-transform duration-200 hover:scale-105 hover:bg-orange-500 text-black font-bold border-2 border-orange-500"
+            >
+              Enterprise Service
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="transition-transform duration-200 hover:scale-105 hover:bg-purple-500 text-black font-bold border-2 border-purple-500"
+            >
+              Restaurant Service
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="transition-transform duration-200 hover:scale-105 hover:bg-pink-500 text-black font-bold border-2 border-pink-500"
+            >
+              Government
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="transition-transform duration-200 hover:scale-105 hover:bg-blue-500 text-black font-bold border-2 border-blue-500"
+            >
+              Business Consultant
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="transition-transform duration-200 hover:scale-105 hover:bg-brown-500 text-black font-bold border-2 border-brown-500"
+            >
+              Banking Service
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="transition-transform duration-200 hover:scale-105 hover:bg-gray-500 text-black font-bold border-2 border-gray-500"
+            >
+              Event & Ticket
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="transition-transform duration-200 hover:scale-105 hover:bg-cyan-500 text-black font-bold border-2 border-cyan-500"
+            >
+              Ecommerce Development
+            </Button>
+          </div>
+        </div>
+      </section>
+      
+{/* Tools & Technology */}
+      <section>
+        <h4 className='text-center text-4xl py-4'>Tools & Technology</h4>
+        <div className="flex flex-wrap justify-center gap-8">
+          <Image src="/android-icon.png" alt="Android Icon" className="h-8 w-8" />
+          <Image src="/html-icon.png" alt="HTML Icon" className="h-8 w-8" />
+          <Image src="/css-icon.png" alt="CSS Icon" className="h-8 w-8" />
+          <Image src="/sass-icon.png" alt="Sass Icon" className="h-8 w-8" />
+          <Image src="/jquery-icon.png" alt="jQuery Icon" className="h-8 w-8" />
+          <Image src="/vue-icon.png" alt="Vue Icon" className="h-8 w-8" />
+          <Image src="/react-icon.png" alt="React Icon" className="h-8 w-8" />
+          <Image src="/php-icon.png" alt="PHP Icon" className="h-8 w-8" />
+          <Image src="/laravel-icon.png" alt="Laravel Icon" className="h-8 w-8" />
+          <Image src="/wordpress-icon.png" alt="WordPress Icon" className="h-8 w-8" />
+          <Image src="/mysql-icon.png" alt="MySQL Icon" className="h-8 w-8" />
         </div>
       </section>
 
@@ -162,6 +275,7 @@ export default function HomePage() {
 
       {/* FAQ Section */}
       <Faqs/>
+
 
     </div>
   )

@@ -46,13 +46,15 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <SectionHeader
-          title="Our Services"
-          subtitle="Comprehensive digital solutions to help your business grow"
-          centered
-        />
+    <div className="max-w-8xl mx-auto  pt-12">
+      <SectionHeader
+      title="Our Services"
+      subtitle="Discover our range of cutting-edge digital solutions designed to elevate your business. From web development to marketing strategies, we provide everything you need to succeed in the digital world."
+      centered
+      description="At AairtIt, we specialize in delivering exceptional services tailored to meet your unique needs. Let us help you achieve your business goals with innovative, efficient, and reliable solutions."
+    />
+    <div className="min-h-screen pt-24 pb-16 max-w-7xl mx-auto" >
+      
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
